@@ -1,0 +1,131 @@
+html, body {
+  background: #F2F2F2;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+  overflow: hidden;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.outer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c_container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#circle1{
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  background: powderblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 100ms 0s ease;
+}
+
+#circle2{
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  background: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 100ms 0s ease;
+}
+
+#circle_c{
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  border: solid 3px pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2000ms 0s ease;
+}
+
+#circle_c:active{
+  width: 800em;
+  height: 800em;
+  border-radius: 50%;
+  background: pink;
+  opacity: 0.8;
+}
+
+a{
+color: lightcoral;
+text-decoration: none;
+transition: all 2000ms 0s ease;
+}
+
+a:active{
+color: white;
+text-decoration: none;
+opacity: 0.2;
+}
+
+p{
+  font-size: 3em;
+}
+
+#circle3{
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  background: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 100ms 0s ease;
+}
+
+#circle4{
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  background: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 100ms 0s ease;
+}
+
+#circle1:active, #circle2:active, #circle3:active, #circle4:active{
+  opacity: 0.85;
+  width: 16.5em;
+  height: 16.5em;
+}
+
+#count1, #count2, #count3, #count4{
+  font-size: 2em;
+  opacity: 0.5;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+}
+
+.click{
+  font-size: 1.2em;
+  opacity: 0.5;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  top: 60%;
+}
+
+.padding{
+  padding: 0.5em 6em 0.5em 6em;
+  display: inline-block;
+  border-radius: 50%;
+}

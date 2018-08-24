@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>C_Curry</title>
+    <meta charset="utf-8"/>
+    <!--<link rel="stylesheet" type="text/css" href="C_Curry.css"/>-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <script type="text/javascript" src="{% static 'js/count.js' %}"></script>
+	<!--<script type="text/javascript" src="count.js"></script>-->
+  </head>
+  <body>
+	<div class="outer">
+	  <div class="inner">
+	    <div class="c_container">
+	      <div class="padding">
+		    <div class="animated slideInDown delay-4s" id="circle1" onclick="countUp1();">
+              <div id="count1">0</div>
+			  <div class="click"> click!</div>
+		    </div>
+		  </div>
+	      <div class="padding">
+		    <div class="animated slideInRight delay-4s" id="circle2" onclick="countUp2();">
+		      <div id="count2">0</div>
+			  <div class="click"> click!</div>
+		    </div>
+		  </div>
+	    </div>
+	    <div class="c_container">
+	      <div class="padding">
+		    <a href="#" class="animated zoomIn delay4s" id="circle_c"><p>NEXT</p></a>
+		  </div>
+	    </div>
+	    <div class="c_container">
+		  <div class="padding">
+		    <div class="animated slideInLeft delay-4s" id="circle3" onclick="countUp3();">
+		      <div id="count3">0</div>
+			  <div class="click"> click!</div>
+		    </div>
+		  </div>
+	      <div class="padding">
+		    <div class="animated slideInUp delay-4s" id="circle4" onclick="countUp4();">
+		      <div id="count4">0</div>
+			  <div class="click"> click!</div>
+		    </div>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+  </body>
+</html>

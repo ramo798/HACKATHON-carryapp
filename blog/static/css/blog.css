@@ -1,0 +1,147 @@
+html, body {
+  background: #F2F2F2;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+  overflow: hidden;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.outer{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c_container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#circle1, #circle2, #circle3, #circle4{
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  background: powderblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 150ms 0s ease;
+  filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.3));
+}
+
+#circle2{
+  background: orange;
+}
+
+#circle3{
+  background: tomato;
+}
+
+#circle4{
+  background: yellowgreen;
+}
+
+#circle1:active, #circle2:active, #circle3:active, #circle4:active{
+  opacity: 0.85;
+  width: 17em;
+  height: 17em;
+}
+
+#circle_c{
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  border: solid 3px pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 2000ms 0s ease;
+}
+
+#circle_c:active{
+  width: 800em;
+  height: 800em;
+  border-radius: 50%;
+  background: pink;
+  opacity: 0.8;
+}
+
+a{
+color: lightcoral;
+text-decoration: none;
+transition: all 2000ms 0s ease;
+}
+
+a:active{
+color: white;
+text-decoration: none;
+opacity: 0.2;
+}
+
+p{
+  font-size: 3em;
+}
+
+#count1, #count2, #count3, #count4{
+  font-size: 2em;
+  opacity: 0.5;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  transition: all 400ms 0s ease;
+}
+
+.click{
+  font-size: 1.2em;
+  opacity: 0.5;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  top: 60%;
+}
+
+.padding{
+  padding: 0.5em 6em 0.5em 6em;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+@media screen and (max-width:700px) {
+.inner{
+  font-size: 0.7em;
+}
+}
+
+@media screen and (max-width:500px) {
+
+.inner{
+  font-size: 0.7em;
+}
+
+#circle1, #circle2, #circle3, #circle4{
+  width: 7em;
+  height: 7em;
+}
+
+#circle_c{
+  width: 13em;
+  height: 13em;
+}
+
+#circle1:active, #circle2:active, #circle3:active, #circle4:active{
+  width: 9em;
+  height: 9em;
+}
+
+a{
+  font-size: 0.4em;
+}
+
+.padding{
+  padding: 0.1em 2em 0.1em 2em;
+}
