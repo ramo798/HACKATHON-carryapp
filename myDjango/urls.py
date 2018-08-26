@@ -18,8 +18,12 @@ from django.contrib import admin
 
 from django.conf.urls import include, url
 from django.contrib import admin
+from blog  import views
 
 urlpatterns = [
     url('admin/', admin.site.urls),
-    url(r'', include('blog.urls')),
+    #url(r'', include('blog.urls')),
+    url(r'^$', views.post_list, name='post_list'),
+    url(r'^result/', views.result, name='result'),
+    #url(r'^aaa$', include('blog.urls')),
 ]
