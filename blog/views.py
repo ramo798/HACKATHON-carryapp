@@ -12,6 +12,7 @@ def result(request):
         'c2val': request.GET.get('c2val'),
         'c3val': request.GET.get('c3val'),
         'c4val': request.GET.get('c4val'),
+        'title': Contents.objects.all()
 
     }
     return render(request, 'blog/result.html', d)
