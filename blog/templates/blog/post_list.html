@@ -29,7 +29,7 @@
 	    </div>
 	    <div class="c_container">
 	      <div class="padding">
-		    <form method="post" action="result.html" name="f">
+		    <form method="get" action="{% url 'result' %}" name="f">
 			  <input type="hidden" name="c1val" value="0"> <!--　隠し要素のhiddenをtextに変えれば確認が可能です　-->
 			  <input type="hidden" name="c2val" value="0">
 			  <input type="hidden" name="c3val" value="0">

@@ -11,7 +11,7 @@ def result(request):
 
 def sum(request):
    d = {
-       'sum': request.GET.get('sum')
+       'c1val': request.GET.get('c1val')
    }
 
    return render(request, 'result.html', d)
