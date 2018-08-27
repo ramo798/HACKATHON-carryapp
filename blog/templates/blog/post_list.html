@@ -4,19 +4,18 @@
   <head>
     <title>C_Curry</title>
     <meta charset="utf-8"/>
-    <!--<link rel="stylesheet" type="text/css" href="C_Curry.css"/>-->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="C_Curry.css"/>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-
   <link rel="stylesheet" href="{% static 'css/blog.css' %}">
   <script type="text/javascript" src="{% static 'js/count.js' %}"></script>
-	<!--<script type="text/javascript" src="count.js"></script>-->
   </head>
-  <body>
+  <body ontouchstart="">
 	<div class="outer">
 	  <div class="inner">
 	    <div class="c_container">
 	      <div class="padding">
-		    <div class="animated slideInDown delay-4s" id="circle1" onclick="countUp1();">
+		    <div class="animated slideInDown delay-4s" id="circle1" onClick="countUp1();">
               <div id="count1">0</div>
 			  <div class="click"> click!</div>
 		    </div>
@@ -30,7 +29,13 @@
 	    </div>
 	    <div class="c_container">
 	      <div class="padding">
-		    <a href="#" class="animated zoomIn delay4s" id="circle_c"><p>NEXT</p></a>
+		    <form method="post" action="result.html" name="f">
+			  <input type="hidden" name="c1val" value="0"> <!--　隠し要素のhiddenをtextに変えれば確認が可能です　-->
+			  <input type="hidden" name="c2val" value="0">
+			  <input type="hidden" name="c3val" value="0">
+			  <input type="hidden" name="c4val" value="0">
+			  <input class="animated zoomIn delay4s" id="circle_c" type="submit" name="submit" value="NEXT">
+		    </form>
 		  </div>
 	    </div>
 	    <div class="c_container">
