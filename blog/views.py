@@ -7,12 +7,26 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def result(request):
-    posts = Contents.objects.filter(id = 1)
+    a = int( request.GET.get('c1val') )
+    b = int( request.GET.get('c2val') )
+    c = int( request.GET.get('c3val') )
+    d = int( request.GET.get('c4val') )
+
+    if a > b and a > c and a > d :
+        posts = Contents.objects.filter(id = 1)
+    if b > a and b > c and b > d :
+        posts = Contents.objects.filter(id = 2)
+    if c > a and c > b and c > d :
+        posts = Contents.objects.filter(id = 3)
+    if d > a and d > b and d > c :
+        posts = Contents.objects.filter(id = 4)
+
+
+
+
+    #posts = Contents.objects.filter(id = 1)
     d = {
-        'c1val': request.GET.get('c1val'),
-        'c2val': request.GET.get('c2val'),
-        'c3val': request.GET.get('c3val'),
-        'c4val': request.GET.get('c4val'),
+        'test': a+b+c+d,
         'posts': posts,
 
 

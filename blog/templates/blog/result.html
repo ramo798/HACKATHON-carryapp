@@ -14,15 +14,14 @@
 		</div>
     {% for post in posts %}
 		<div class="catch">
-		  <h1>イライラしている人がいるようです</h1> <!--ここに何か面白い？一言-->
+		  <h1>{{post.word_text}}</h1> <!--ここに何か面白い？一言-->
 		  <h2>おすすめ：{{ post.title }}</h2> <!--ここに料理名-->
 		</div>
     {% endfor %}
 
 		<div class="detail">
 		  <p>
-		   まる1：{{ c1val }}、まる2：{{ c2val }}、まる3：{{ c3val }}、まる4：{{ c4val }}<br>
-
+		   ここに説明が欲しい{{test}}
 		  </p>
 		</div>
 	  </div>
