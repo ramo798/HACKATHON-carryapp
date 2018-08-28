@@ -7,12 +7,14 @@ def post_list(request):
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def result(request):
+    posts = Contents.objects.filter(id = 1)
     d = {
         'c1val': request.GET.get('c1val'),
         'c2val': request.GET.get('c2val'),
         'c3val': request.GET.get('c3val'),
         'c4val': request.GET.get('c4val'),
-        'title': Contents.objects.all()
+        'posts': posts,
+
 
     }
     return render(request, 'blog/result.html', d)
