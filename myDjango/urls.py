@@ -19,11 +19,14 @@ from django.contrib import admin
 from django.conf.urls import include, url
 from django.contrib import admin
 from blog  import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     url('admin/', admin.site.urls),
     #url(r'', include('blog.urls')),
     url(r'^$', views.post_list, name='post_list'),
     url(r'^result/', views.result, name='result'),
+    #url(r'^result/', include('posts.urls')),
     #url(r'^aaa$', include('blog.urls')),
 ]

@@ -16,7 +16,6 @@ def result(request):
     if a > b and a > c and a > d :
         posts = Contents.objects.filter(id = 1)
         mozi = Naiyou.objects.filter(id = 1)
-
     if b > a and b > c and b > d :
         posts = Contents.objects.filter(id = 2)
         mozi = Naiyou.objects.filter(id = 2)
