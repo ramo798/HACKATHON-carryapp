@@ -20,6 +20,8 @@ def result(request):
         posts = Contents.objects.filter(id = 3)
     if d > a and d > b and d > c :
         posts = Contents.objects.filter(id = 4)
+    if a+b+c+d :
+        posts = Contents.objects.filter(id = 1)
 
 
 
