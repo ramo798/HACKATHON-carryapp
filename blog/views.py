@@ -15,6 +15,7 @@ def result(request):
 
     if a > b and a > c and a > d :
         posts = Contents.objects.filter(id = 1)
+        mozi = Naiyou.objects.filter(id = 1)
         url = "{% static 'pic/curry_indian_man.png' %}"
         #url = "static 'pic/curry_indian_man.png' "
     if b > a and b > c and b > d :
@@ -33,7 +34,8 @@ def result(request):
     d = {
         'test': a+b+c+d,
         'posts': posts,
-        'url': url
+        'url': url,
+        'mozi': mozi,
 
 
     }

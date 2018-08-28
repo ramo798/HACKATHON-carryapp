@@ -18,13 +18,14 @@
 		  <h2>おすすめ：{{ post.title }}</h2> <!--ここに料理名-->
 		</div>
     {% endfor %}
-
+    {% for syousai in mozi.all %}
 		<div class="detail">
 		  <p>
-		   ここに説明が欲しい<br>
+		   {{syousai.hitokoto}}<br>
        数値の合計:{{test}}
 		  </p>
 		</div>
+    {% endfor %}
 	  </div>
 	</div>
 
