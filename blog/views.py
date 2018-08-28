@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.utils import timezone
 from .models import Contents
+from .models import Naiyou
 
 def post_list(request):
     posts = Contents.objects.all()
@@ -14,6 +15,8 @@ def result(request):
 
     if a > b and a > c and a > d :
         posts = Contents.objects.filter(id = 1)
+        url = "{% static 'pic/curry_indian_man.png' %}"
+        #url = "static 'pic/curry_indian_man.png' "
     if b > a and b > c and b > d :
         posts = Contents.objects.filter(id = 2)
     if c > a and c > b and c > d :
@@ -30,6 +33,7 @@ def result(request):
     d = {
         'test': a+b+c+d,
         'posts': posts,
+        'url': url
 
 
     }
