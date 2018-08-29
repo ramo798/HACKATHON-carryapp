@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from .models import Contents
 from .models import Naiyou
+import random
 
 def post_list(request):
     posts = Contents.objects.all()
@@ -12,29 +13,72 @@ def result(request):
     b = int( request.GET.get('c2val') )
     c = int( request.GET.get('c3val') )
     d = int( request.GET.get('c4val') )
+    sum = a + b + c + d
 
-    if a > b and a > c and a > d :
-        posts = Contents.objects.filter(id = 1)
-        mozi = Naiyou.objects.filter(id = 1)
-    if b > a and b > c and b > d :
-        posts = Contents.objects.filter(id = 2)
-        mozi = Naiyou.objects.filter(id = 2)
-    if c > a and c > b and c > d :
-        posts = Contents.objects.filter(id = 3)
-        mozi = Naiyou.objects.filter(id = 3)
-    if d > a and d > b and d > c :
-        posts = Contents.objects.filter(id = 4)
-        mozi = Naiyou.objects.filter(id = 4)
-    if a+b+c+d == 0 :
-        posts = Contents.objects.filter(id = 1)
-        mozi = Naiyou.objects.filter(id = 1)
+    w1 = float(a/sum)
+    w2 = float(b/sum)
+    w3 = float(c/sum)
+    w4 = float(d/sum)
+
+    y = [1,2,3]
+    g = [4,5,6]
+    r = [7,8,9]
+    b = [10,11,12]
+
+    if w1 < 0.2 :
+        yr = [0]
+    if 0.19 < w1 < 0.30 :
+        yr = [random.choice(y)]
+    if 0.29 < w1 < 0.40 :
+        yr = random.sample(y,2)
+    if w1 > 0.39 :
+        yr = random.sample(y,3)
+
+    if w2 < 0.2 :
+        gr = [0]
+    if 0.19 < w2 < 0.30 :
+        gr = [random.choice(g)]
+    if 0.29 < w2 < 0.40 :
+        gr = random.sample(g,2)
+    if w2 > 0.39 :
+        gr = random.sample(g,3)
+
+    if w3 < 0.2 :
+        rr = [0]
+    if 0.19 < w3 < 0.30 :
+        rr = [random.choice(r)]
+    if 0.29 < w3 < 0.40 :
+        rr = random.sample(r,2)
+    if w3 > 0.39 :
+        rr = random.sample(r,3)
+
+    if w4 < 0.2 :
+        br = [0]
+    if 0.19 < w4 < 0.30 :
+        br = [random.choice(b)]
+    if 0.29 < w4 < 0.40 :
+        br = random.sample(b,2)
+    if w4 > 0.39 :
+        br = random.sample(b,3)
+
+    kekka = yr+gr+rr+br
+
+    if 0 in kekka :
+        kekka.remove(0)
+    if 0 in kekka :
+        kekka.remove(0)
+    if 0 in kekka :
+        kekka.remove(0)
+    if 0 in kekka :
+        kekka.remove(0)
+
+    ijou = random.choice(kekka)
 
 
-
-
-    #posts = Contents.objects.filter(id = 1)
+    posts = Contents.objects.filter(id = ijou)
+    mozi = Naiyou.objects.filter(id = ijou)
     d = {
-        'test': a+b+c+d,
+        'test': ijou,
         'posts': posts,
         'mozi': mozi,
     }
