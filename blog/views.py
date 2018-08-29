@@ -92,7 +92,7 @@ def result(request):
     posts = Contents.objects.filter(id = ijou)
     mozi = Naiyou.objects.filter(id = ijou)
     d = {
-        'test': ijou,
+        
         'posts': posts,
         'mozi': mozi,
     }
