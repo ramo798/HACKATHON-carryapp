@@ -39,22 +39,22 @@ def result(request):
         kekka = y + g + r + b
 
     if w1 < 0.2 :
-        yr = [0]
+        br = [0]
     if 0.19 < w1 < 0.30 :
-        yr = [random.choice(y)]
+        br = [random.choice(b)]
     if 0.29 < w1 < 0.40 :
-        yr = random.sample(y,2)
+        br = random.sample(b,2)
     if w1 > 0.39 :
-        yr = random.sample(y,3)
+        br = random.sample(b,3)
 
     if w2 < 0.2 :
-        gr = [0]
+        yr = [0]
     if 0.19 < w2 < 0.30 :
-        gr = [random.choice(g)]
+        yr = [random.choice(y)]
     if 0.29 < w2 < 0.40 :
-        gr = random.sample(g,2)
+        yr = random.sample(y,2)
     if w2 > 0.39 :
-        gr = random.sample(g,3)
+        yr = random.sample(y,3)
 
     if w3 < 0.2 :
         rr = [0]
@@ -66,13 +66,13 @@ def result(request):
         rr = random.sample(r,3)
 
     if w4 < 0.2 :
-        br = [0]
+        gr = [0]
     if 0.19 < w4 < 0.30 :
-        br = [random.choice(b)]
+        gr = [random.choice(g)]
     if 0.29 < w4 < 0.40 :
-        br = random.sample(b,2)
+        gr = random.sample(g,2)
     if w4 > 0.39 :
-        br = random.sample(b,3)
+        gr = random.sample(g,3)
     if sum != 0:
         kekka = yr+gr+rr+br
 
