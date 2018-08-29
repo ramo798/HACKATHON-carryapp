@@ -14,11 +14,21 @@ def result(request):
     c = int( request.GET.get('c3val') )
     d = int( request.GET.get('c4val') )
     sum = a + b + c + d
+    if sum != 0:
+        w1 = float(a/sum)
+        w2 = float(b/sum)
+        w3 = float(c/sum)
+        w4 = float(d/sum)
 
-    w1 = float(a/sum)
-    w2 = float(b/sum)
-    w3 = float(c/sum)
-    w4 = float(d/sum)
+    if sum == 0:
+        w1 = 0.1
+        w2 = 0.1
+        w3 = 0.1
+        w4 = 0.1
+
+
+
+
 
     y = [1,2,3]
     g = [4,5,6]
@@ -63,8 +73,9 @@ def result(request):
         br = random.sample(b,2)
     if w4 > 0.39 :
         br = random.sample(b,3)
+    if sum != 0:
+        kekka = yr+gr+rr+br
 
-    kekka = yr+gr+rr+br
 
     if 0 in kekka :
         kekka.remove(0)
