@@ -25,6 +25,9 @@ def result(request):
     r = [7,8,9]
     b = [10,11,12]
 
+    if sum == 0:
+        kekka = y + g + r + b
+
     if w1 < 0.2 :
         yr = [0]
     if 0.19 < w1 < 0.30 :
