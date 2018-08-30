@@ -1,3 +1,26 @@
+(function(win, doc) {
+    
+    "use strict";
+    
+    var tapFlag = false,
+        timer;
+    
+    doc.body.addEventListener("touchstart", function(evt) {
+        if (tapFlag) {
+            evt.preventDefault();
+        }
+    }, true);
+
+    doc.body.addEventListener("touchend", function(evt) {
+        tapFlag = true;
+        clearTimeout(timer);
+        timer = setTimeout(function() {
+            tapFlag = false;
+        }, 200);
+    }, true);
+    
+})(window, document);
+
 var $count1 = 0;
 function countUp1() {
     $count1 = ++$count1;
