@@ -1,5 +1,7 @@
 var $count1 = 0;
 function countUp1() {
+
+  
     $count1 = ++$count1;
 	document.getElementById( "count1" ).innerHTML = $count1;
 	document.f.c1val.value=$count1;
