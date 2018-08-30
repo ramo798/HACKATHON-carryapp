@@ -39,96 +39,63 @@ h2{
   font-size: 1.2em;
 }
 
-@media screen and (max-width:1600px) {
+@media screen and (max-width:1440px) {
 
 #main-in{
-  width: 60%;
+  width: 85%;
   height: 90%;
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  text-align: center;
 }
 
-h1{
-  font-size: 1.7em;
-}
-
-h2{
-  font-size: 1.2em;
-}
-
-.detail{
-  font-size: 0.9em;
-}
-
-}
-
-@media screen and (max-width:1200px) {
-
-#main-in{
-  width: 70%;
-  height: 90%;
-}
-
-h1{
-  font-size: 1.7em;
-}
-
-h2{
-  font-size: 1.2em;
-}
-
-.detail{
-  font-size: 0.9em;
-}
-
-}
-
-
-@media screen and (max-width:780px) {
-
-#main-in{
-  width: 80%;
-  height: 90%;
+.top-image, .catch, .detail{
+  margin: 4em 1em 0 1em;
 }
 
 img.top-img{
-  width:50%;
+  width: 36%;
 }
 
 h1{
-  font-size: 1.7em;
+  font-size: 2.5em;
 }
 
 h2{
+  font-size: 1.8em;
+}
+
+.detail{
   font-size: 1.2em;
 }
 
-.detail{
-  font-size: 0.8em;
 }
 
-}
-
-
-@media screen and (max-width:500px) {
+@media screen and (max-width:750px) {
 
 #main-in{
-  width: 80%;
+  width: 90%;
   height: 90%;
+  background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+  text-align: center;
+}
+
+.top-image, .catch, .detail{
+  margin: 4em 1em 0 1em;
 }
 
 img.top-img{
-  width:70%;
+  width: 45%;
 }
 
 h1{
-  font-size: 1.3em;
+  font-size: 2em;
 }
 
 h2{
-  font-size: 0.9em;
+  font-size: 1.5em;
 }
 
 .detail{
-  font-size: 0.8em;
-}
+ font-size: 1.1em;
 
 }
